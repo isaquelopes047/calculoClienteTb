@@ -1,0 +1,67 @@
+.containerPrincipal{
+    height: auto;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.containerTitlte{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.containerTitlte p{
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* conteudo */
+
+.containerConteudo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.containerContenteInput{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.containerContenteInput > *{
+    margin-left: 30px;
+}
+.containerContenteInput input{
+    width: calc(100% - 60px);
+    height: 40px;
+    border: none;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    text-align: center;
+    outline: 0px;
+}
+
+/* BOTAO CALCULAR */
+
+.ButtonCalcular{
+    border: none;
+    background-color: green;
+    padding: 7px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+.ButtonCalcular:hover{
+    background-color: rgba(0, 128, 0, 0.704);
+    transition: 0.3s;
+}
