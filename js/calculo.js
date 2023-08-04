@@ -1,10 +1,7 @@
-
 function pegaValoresData() {
-
     let dataUmString = document.querySelector('.dataUm').value;
     let dataDoisString = document.querySelector('.dataDois').value;
 
-    // Converter as strings de data para objetos Date
     let dataUm = new Date(dataUmString);
     let dataDois = new Date(dataDoisString);
 
@@ -13,16 +10,9 @@ function pegaValoresData() {
     let diferencaEmHoras = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60));
     let diferencaEmMinutos = Math.floor((diferencaEmMilissegundos / (1000 * 60)) % 60);
 
-    // Verificar se os minutos excedem 60
-    if (diferencaEmMinutos >= 60) {
-        diferencaEmHoras += Math.floor(diferencaEmMinutos / 60);
-        diferencaEmMinutos %= 60;
-    }
+    let result = diferencaEmHoras + diferencaEmMinutos / 100; // Dividindo os minutos por 100 para obter a fração decimal
 
-    let result = diferencaEmHoras + diferencaEmMinutos / 60;
-
-    return result
-
+    return result;
 }
 
 function dividirValor(){
@@ -36,11 +26,11 @@ function dividirValor(){
         element.style.border = '2px solid green';
     });
 
-    let valorFinal = ( pegaValoresData() * tonelada ) *  tabela
+    let valorFinal = (pegaValoresData() * tonelada) * tabela;
 
     /* ADICIONA OS VALORES NOS CARD DE INFORMAÇÃO */
-    textoValorHoras.textContent = `${ pegaValoresData().toFixed(2) } Horas`
-    textoValorValor.textContent = `R$ ${ valorFinal.toFixed(2) }`
+    textoValorHoras.textContent = `${pegaValoresData()} Horas`;
+    textoValorValor.textContent = `R$ ${valorFinal.toFixed(2)}`;
 }
 
 let acionaFunc = document.querySelector('.ButtonCalcular');
